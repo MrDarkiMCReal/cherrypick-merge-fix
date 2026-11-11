@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        intellijIdeaCommunity("2022.3")
+        intellijIdeaCommunity("2023.3")
         bundledPlugin("Git4Idea")
     }
 }
