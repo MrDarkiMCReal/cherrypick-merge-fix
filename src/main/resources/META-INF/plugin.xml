@@ -1,0 +1,18 @@
+<idea-plugin>
+    <id>org.mrdarkimc.cherrypickfix</id>
+    <name>Cherry-pick Merge Fix</name>
+    <description>
+        Adds params '-m 1 -x' to cherry-pick if you are trying to cherrypick merge-commit
+        Only works if you are using git4idea (intellej idea git gui)
+    </description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>Git4Idea</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService
+                serviceInterface="git4idea.commands.Git"
+                serviceImplementation="org.mrdarkimc.cherrypickfix.CherryPickEventHandler"
+                overrides="true"/>
+    </extensions>
+</idea-plugin>
